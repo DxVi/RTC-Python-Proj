@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="D:/RTC/db.sqlite3" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure pragmas browser query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="3315"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,10:mainauth_group"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">select image_url,  substr(image_url, instr(image_url, '_')+1, length(image_url)) from products_product
+where id=id
+
+update products_product set image_url =substr(image_url, instr(image_url, '_')+1, length(image_url))
+where id = id
+
+select * from products_product
+
+select * from products_product where category = 'Wheels &amp; Tires'
+update  products_product  set category = 'Wheels and Tires' where category = 'Wheels &amp; Tires'
+
+select * from products_category
+
+update products_category set name='Oils and Lubricants' where id=7</sql><current_tab id="0"/></tab_sql></sqlb_project>

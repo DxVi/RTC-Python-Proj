@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="products-container">
+        <div class="category-sidebar">
+                 {% for category in categories %}
+                    <a href="/products/category/?id={{category.id}}">{{ category.name }}</a>
+                 {% endfor%}
+        </div>
+        <div class="products-card-container">
+             {% block products_by_category %}
+             {% endblock products_by_category %}
+        </div>
+    </div>
+{% endblock %}
