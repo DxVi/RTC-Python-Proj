@@ -2,7 +2,6 @@ body {
     margin:0;
     padding:0;
     height:100vh;
-    /* background-color: white; */
     background-image: url("/static/images/main.png");
     background-size: cover;
 }
@@ -47,7 +46,7 @@ nav p {
     text-shadow:3px 3px 5px black;
     color: white;
     display: flex;
-    flex:1;
+    flex:2;
     justify-content: center;
     align-items: center;
     background: linear-gradient(-45deg, lightblue, blue, skyblue, dodgerblue);
@@ -61,7 +60,7 @@ nav a{
     color: Blue;
     transition: all 0.2s;
     display: flex;
-    flex:2;
+    flex:3;
     justify-content: center;
     align-items: center;
 }
@@ -84,6 +83,21 @@ nav a:hover{
 
     .home-header h2{
         font-size:1.5rem;
+    }
+
+    .officers{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    footer{
+        display: flex;
+        text-align: center;
+    }
+    .home-header{
+        text-align: center;
     }
 }
 /*---HOME-------------------------------*/
@@ -114,31 +128,27 @@ nav a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: white; */
 }
 
-.home-logo img{
-    
-}
 .home-footer{
     background-color: #2196f3;
     border: 5px solid yellow;
 }
 /*---PRODUCTS-------------------------------*/
 .products-container{
-    height: calc(100vh - 100px);
-    /* margin-top: 10px; */
+    /* height: calc(100vh - 100px); */
+    height:94%;
     margin-top: .2rem;
-    /* margin: 0; */
     padding:.5rem;
     background-color: white;
     display: flex;
     justify-content: space-between;
+
 }
 .category-sidebar{
     border: 1px solid  #2196f3;
-    width: 15%;
-    height: 100%;
+    width: 40%;
+    height: 83%;
     box-shadow: 3px 3px 5px #888888;
     display:flex;
     flex-direction: column;
@@ -150,19 +160,21 @@ nav a:hover{
 
 .products-card-container{
     border: 1px solid  #2196f3;
+    margin-left: .5rem;  
     width: 84%;
-    height: 100%;
+    height: 98%;
     box-shadow: 3px 3px 5px #888888;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 1rem;
     overflow-y: scroll;
+
 }
 
 .category-sidebar a{
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: blue;
 }
 
@@ -190,3 +202,88 @@ nav a:hover{
     background-color: white;
     box-shadow: 3px 3px 5px #888888;
 } */
+
+/*---ABOUT-------------------------------*/
+.about-container{
+    padding:0;
+    margin:0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height:97%;
+    overflow-y: scroll;
+    display:flex;
+    flex-wrap: wrap;
+
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    text-shadow:3px 3px 5px #888888;
+}
+
+.about-container div, li{
+    color: dodgerblue;
+    font-size:80%;
+} 
+.about-container p{
+    color: dodgerblue;
+    font-size: 100%;
+}
+.box-1{
+    width: 100%;
+}
+.box-2, .box-3, .box-4{
+    padding: 1rem;
+}
+.gen-info{
+    color:salmon;
+    text-align: right;
+    font-size: 100%;
+}
+.about-container span{
+    font-weight: bolder;
+}
+.about-container h4{
+    color:darkblue;
+}
+
+/*---OFFICERS---*/ 
+.officers-container{
+    height:94%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    text-shadow:3px 3px 5px #888888;
+    padding: 1rem;
+}
+.officers-container h3{
+    color:darkblue;
+}
+.officers-container h5{
+    color:blue;
+}
+.officers{
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    padding: .5rem;
+}
+
+.officers-card{
+    border: 1px solid  #2196f3;
+    margin-left: .5rem;  
+    box-shadow: 3px 3px 5px #888888;
+    padding: .5rem;
+   
+}
+.officers img{
+    width: 100px;
+    height: 100px;
+}
+.officers p{
+    color:maroon;
+}
+.officers h4{
+    color:darkblue;
+}
