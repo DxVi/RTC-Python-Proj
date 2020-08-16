@@ -18,8 +18,8 @@
         <title>RTC</title>
   </head>
   <body>
-      <div class="body-container">
-          <header class="item">
+      <div class="base-container">
+          <div class="base-header">
             <nav>
                 <p>R T C</p>
                 <a href="/home">Home</a>
@@ -32,12 +32,14 @@
                 <a href="/products/contact/">Contact</a>
                 <a href="/admin">Admin</a>
             </nav>
-          </header>
-          <main>
+          </div>
+          <div class="base-content">
               {% block content %}
               {% endblock %}
-          </main>
-          <footer class="item">© 2018 ROMBLON TRANSPORT COOPERATIVE (RTC) | CDA Reg No. 9520-1018000000046928 | TIN 756-296-750-000 | All Rights Reserved</footer>
+          </div>
+          <div class="base-footer">
+            © 2018 ROMBLON TRANSPORT COOPERATIVE (RTC) | CDA Reg No. 9520-1018000000046928 | TIN 756-296-750-000 | All Rights Reserved
+          </div>
       </div>
 
     <!-- Optional JavaScript -->

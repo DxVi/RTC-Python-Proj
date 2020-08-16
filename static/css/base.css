@@ -1,86 +1,98 @@
 body {
     margin:0;
     padding:0;
-    height:100vh;
-    background-image: url("/static/images/main.png");
-    background-size: cover;
-}
-.body-container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-nav{
-    height: 50px;
-    display:flex;
-    background-color: lightblue;
-    box-shadow: 3px 3px 5px #888888;
-    text-shadow: 2px 2px 4px #888888;
-}
-main{
-    height: calc(100vh - 100px);
+    font-family: 'Bookman Old Style';
 }
 
-footer{
-    height: 50px;
+.base-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.base-header{
+    flex-basis: 5%;
+    background-color: darkblue;
+}
+
+nav{
+    height: 100%;
     display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: lightskyblue;
-    font-family: monospace;
+    box-shadow: 3px 3px 5px black;
+    text-shadow: 2px 2px 4px black;
 }
 
 @keyframes gradient {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
-  }
+}
 
-nav p {
+ nav p {
     margin-top:0;
     height:100%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.7rem;
+    font-size: 100%;
     font-weight: bold;
-    text-shadow:3px 3px 5px black;
+    text-shadow:3px 2px 2px black;
     color: white;
     display: flex;
     flex:2;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, lightblue, blue, skyblue, dodgerblue);
+    background: linear-gradient(-45deg, lightblue, blue, skyblue, dodgerblue); 
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
 
 nav a{
     text-decoration: none;
-    font-size: 1.2rem;
-    color: Blue;
+    font-size: 100%;
+    color:white;
     transition: all 0.2s;
     display: flex;
-    flex:3;
+    flex:1;
     justify-content: center;
     align-items: center;
+    text-shadow:2px 1px 1px gray;
 }
 nav a:hover{
     background-color: #2196f3;
     color:white;
-    text-shadow: 3px 3px 5px #888888;
+    text-shadow: 3px 3px 5px black;
 }
 
+.base-content{
+    flex-basis: 90%;
+    background-color: white;
+
+    /* background-image: url("/static/images/logo.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
+}
+
+.base-footer{
+    flex-basis: 5%;
+    background-color: dodgerblue;
+    color:white;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 @media screen and (max-width: 575px){
-    nav{
-        flex-direction: column;
-        height:330px;
-    }
  
-    nav p{
-        font-size: 1rem;
+    nav a{
+        font-size: 50%;
+        text-align: center;
     }
 
+    .base-footer{
+        text-align: center;
+        font-size: 67%;
+    }
     .home-header h2{
         font-size:1.5rem;
     }
@@ -92,10 +104,7 @@ nav a:hover{
         align-content: center;
     }
 
-    footer{
-        display: flex;
-        text-align: center;
-    }
+    
     .home-header{
         text-align: center;
     }
@@ -130,10 +139,6 @@ nav a:hover{
     align-items: center;
 }
 
-.home-footer{
-    background-color: #2196f3;
-    border: 5px solid yellow;
-}
 /*---PRODUCTS-------------------------------*/
 .products-container{
     /* height: calc(100vh - 100px); */
