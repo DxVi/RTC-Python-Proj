@@ -7,10 +7,10 @@
     {% for category in categories %}
         {% for product in products %}
             <div class="products-list">
-                <div class="card products-card" style="width: 5rem;">
+                <div class="card products-card" style="width: 100%; height: 100%">
                     <img class="card-img-top"  src="/static/images/products/{{category.name}}/{{ product.image_url }}" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{ product.name }}</h5>
+                        <h6 class="card-title">{{ product.name }}</h6>
                         <p class="card-text">PhP {{ product.price }}</p>
                         <!-- <a href="#" class="btn btn-primary">Add To Cart</a> -->
                     </div>
