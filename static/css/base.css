@@ -1,3 +1,42 @@
+.menu-text{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow:1px 1px 2px #888888;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.regular-text{
+    color: dodgerblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow:1px 1px 2px #888888;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.title-text{
+    color: rgb(194, 108, 108);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow:1px 1px 2px #888888;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.mono-text{
+    color: white;
+    font-size: 1rem;
+    text-shadow:1px 1px 2px #888888;
+    font-family: monospace;
+}
+
+.gen-info{
+    color: lightsalmon;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow:1px 1px 2px #888888;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 body {
     margin:0;
     padding:0;
@@ -12,7 +51,7 @@ body {
 
 .base-header{
     flex-basis: 5%;
-    background-color: darkblue;
+    background-color: lightblue;
 }
 
 nav{
@@ -31,34 +70,34 @@ nav{
  nav p {
     margin-top:0;
     height:100%;
+    font-family: 'Bookman Old Style';
     font-size: 100%;
-    font-weight: bold;
-    text-shadow:3px 2px 2px black;
+    font-weight: bolder;
+    text-shadow:1px 1px 3px #888888;
     color: white;
     display: flex;
     flex:2;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, lightblue, blue, skyblue, dodgerblue); 
+    background: linear-gradient(-45deg, lightblue,  skyblue, dodgerblue, lightsalmon); 
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
 
 nav a{
     text-decoration: none;
-    font-size: 100%;
-    color:white;
     transition: all 0.2s;
     display: flex;
     flex:1;
     justify-content: center;
     align-items: center;
-    text-shadow:2px 1px 1px gray;
 }
+
 nav a:hover{
-    background-color: #2196f3;
-    color:white;
-    text-shadow: 3px 3px 5px black;
+    text-decoration: none;
+    background-color: lightsalmon;
+    color: dodgerblue;
+    text-shadow: 1px 1px 3px  #888888;
 }
 
 .base-content{
@@ -69,16 +108,20 @@ nav a:hover{
 .base-footer{
     flex-basis: 5%;
     background-color: dodgerblue;
-    color:white;
-    font-family: monospace;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 @media screen and (max-width: 575px){
- 
+    .menu-text, .regular-text, .mono-text, .gen-info {
+        font-size: 1rem;
+    }
+
+    .title-text{
+        font-size: 1.5rem;
+    }
+
     nav a{
         font-size: 50%;
         text-align: center;
@@ -87,20 +130,23 @@ nav a:hover{
     .base-footer{
         text-align: center;
         font-size: 67%;
-        color:red;
+    }
+
+    .home-header{
+        text-align: center;
     }
 
     .home-header h2{
         font-size:1.5rem;
     }
 
-    .products-card-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border:1px solid red;
+    .faq-container h2{
+        font-size: 1.5rem;
     }
 
+    .faq-details{
+        text-align: left;
+    }
 
     .officers{
         flex-direction: column;
@@ -110,9 +156,16 @@ nav a:hover{
     }
 
     
-    .home-header{
-        text-align: center;
+    .officers img{
+        width: 70px;
+        height: 70px;
     }
+
+    .officers h5, h6, p{
+        font-size: .8rem;
+    }
+
+
 }
 /*---HOME---*/
 .home-container{
@@ -127,7 +180,7 @@ nav a:hover{
     background-color: #2196f3;
     font-family: 'Bookman Old Style';
     font-weight: bold;
-    text-shadow:3px 3px 5px black;
+    text-shadow:1px 1px 3px  #888888;
     color: white;
     width: 100%;
     display:flex;
@@ -165,7 +218,7 @@ nav a:hover{
     font-family: 'Shadows Into Light', cursive;
     font-size: medium;
     font-weight: bold;
-    text-shadow:3px 3px 5px #888888;
+    text-shadow:1px 1px 3px #888888;
 }
 
 .category-sidebar a{
@@ -176,27 +229,23 @@ nav a:hover{
     color: crimson;
 }
 
-.left-arrow{
-    height: 3rem;
-    width: 5rem;
-}
+
 .products-card-container{
     height: 100%;
     border: 1px solid  #2196f3;
     flex-basis: 90%;
     padding: .3rem;
     box-shadow: 3px 3px 5px #888888;
-    margin-left: .5rem;  
+    margin-left: .5rem; 
+}
+
+.products-list{
+    height: 100%; 
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-}
-
-.products-list{
-    width: 15%;
-    height: 35%;
 }
 
 .products-card{
@@ -206,11 +255,12 @@ nav a:hover{
     align-items: center;
     padding: .2rem;
     box-shadow: 3px 3px 5px #888888;
+    
 }
 
 .products-card img{
-    width: 70%;
-    height: 55%;
+    width: 10rem;
+    height: 10rem;
     border: 1px solid gold;
 }
 
@@ -221,85 +271,92 @@ nav a:hover{
 
 /*---ABOUT-------------------------------*/
 .about-container{
-    padding:0;
-    margin:0;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    height:97%;
-    overflow-y: scroll;
     display:flex;
+    flex-direction: row;
     flex-wrap: wrap;
-
-    font-family: 'Shadows Into Light', cursive;
-    font-weight: bold;
-    text-shadow:3px 3px 5px #888888;
+    padding: 2rem;
+    justify-content: center;
 }
 
-.about-container div, li{
-    color: dodgerblue;
-    font-size:80%;
-} 
-.about-container p{
-    color: dodgerblue;
-    font-size: 100%;
+.about-our-coop, .about-history{
+    width:100%;
 }
-.box-1{
-    width: 100%;
+
+.about-business-line, .about-address{
+    width: 50%;
 }
-.box-2, .box-3, .box-4{
+
+.about-carousel{
+    width: 75%;
+}
+.about-our-coop, .about-history, .about-business-line, .about-address, .about-carousel{
     padding: 1rem;
-}
-.gen-info{
-    color:salmon;
-    text-align: right;
-    font-size: 100%;
-}
-.about-container span{
-    font-weight: bolder;
-}
-.about-container h4{
-    color:darkblue;
+    border:1px solid lightgray;
 }
 
+.about-our-coop, .about-history, .about-business-line, .about-address{
+    border-bottom: none;
+}
+
+.gen-info{
+    text-align: right;
+    width: 50%;
+}
+ 
+/*---FAQ---*/
+.faq-container{
+    font-family: monospace;
+    padding: 2rem;
+    color: darkblue;
+}
+.faq-container h2{
+    color: green;
+    text-shadow: 1px 1px 2px #888888;
+}
+
+.faq-details{
+    margin-left: 1rem;
+}
 /*---OFFICERS---*/ 
 .officers-container{
-    height:94%;
+    height:100%;
     display:flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
-    font-family: 'Shadows Into Light', cursive;
-    font-weight: bold;
-    text-shadow:3px 3px 5px #888888;
+    font-family: 'Bookman Old Style';
+    text-shadow:1px 1px 2px #888888;
     padding: 1rem;
 }
-.officers-container h3{
-    color:darkblue;
-}
-.officers-container h5{
-    color:blue;
-}
+
 .officers{
     display:flex;
     flex-direction: row;
     text-align: center;
-    padding: .5rem;
+    padding: .2rem;
+    border:1px solid lightgray;
 }
 
 .officers-card{
     border: 1px solid  #2196f3;
-    margin-left: .5rem;  
     box-shadow: 3px 3px 5px #888888;
-    padding: .5rem;
-   
+    padding: .3rem;
+    align-items: center;
 }
+
 .officers img{
     width: 100px;
     height: 100px;
 }
+
+.officers h5{
+    color:darkblue;
+}
+
 .officers p{
     color:maroon;
+    font-size: 1rem;
 }
-.officers h4{
-    color:darkblue;
+
+.officers h6{
+    color:blue;
 }

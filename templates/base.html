@@ -12,7 +12,8 @@
         
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" tpye="text/css" href="{% static 'css/base.css' %}">
 
         <title>RTC</title>
@@ -22,22 +23,22 @@
           <div class="base-header">
             <nav>
                 <p>R T C</p>
-                <a href="/home">Home</a>
-                <a href="/products">Products</a>
-                <a href="/products/newsevents/">News & Events</a>
-                <a href="/products/about/">About Us</a>
-                <a href="/products/faq/">FAQ</a>
-                <a href="/products/officers/">Officers</a>
-                <a href="/products/services/">Services</a>
-                <a href="/products/contact/">Contact</a>
-                <a href="/admin">Admin</a>
+                <a class="menu-text" href="/home">Home</a>
+                <a class="menu-text" href="/products">Products</a>
+                <a class="menu-text" href="/products/newsevents/">News & Events</a>
+                <a class="menu-text" href="/products/about/">About Us</a>
+                <a class="menu-text" href="/products/faq/">FAQ</a>
+                <a class="menu-text" href="/products/officers/">Officers</a>
+                <a class="menu-text" href="/products/services/">Services</a>
+                <a class="menu-text" href="/products/contact/">Contact</a>
+                <a class="menu-text" href="/admin">Admin</a>
             </nav>
           </div>
           <div class="base-content">
               {% block content %}
               {% endblock %}
           </div>
-          <div class="base-footer">
+          <div class="base-footer mono-text">
             © 2018 ROMBLON TRANSPORT COOPERATIVE (RTC) | CDA Reg No. 9520-1018000000046928 | TIN 756-296-750-000 | All Rights Reserved
           </div>
       </div>

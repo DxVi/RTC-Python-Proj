@@ -1,13 +1,10 @@
 {% extends 'category.html' %}
 
 {% block products_by_category %}
-    <div> 
-        <a href="/products"><img class="left-arrow" src="/static/images/left_arrow.png"></a>
-    </div>
+<div class="products-list">
     {% for category in categories %}
         {% for product in products %}
-            <div class="products-list">
-                <div class="card products-card" style="width: 100%; height: 100%">
+                <div class="card products-card" style="width: 15rem;">
                     <img class="card-img-top"  src="/static/images/products/{{category.name}}/{{ product.image_url }}" alt="...">
                     <div class="card-body">
                         <h6 class="card-title">{{ product.name }}</h6>
@@ -15,7 +12,8 @@
                         <!-- <a href="#" class="btn btn-primary">Add To Cart</a> -->
                     </div>
                 </div>
-            </div>
+            
         {% endfor products %}
     {% endfor categories %}
+</div>
 {% endblock products_by_category%}
