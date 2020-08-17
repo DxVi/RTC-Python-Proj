@@ -20,20 +20,34 @@
   </head>
   <body>
       <div class="base-container">
-          <div class="base-header">
-            <nav>
-                <p>R T C</p>
-                <a class="menu-text" href="/home">Home</a>
-                <a class="menu-text" href="/products">Products</a>
-                <a class="menu-text" href="/products/newsevents/">News & Events</a>
-                <a class="menu-text" href="/products/about/">About Us</a>
-                <a class="menu-text" href="/products/faq/">FAQ</a>
-                <a class="menu-text" href="/products/officers/">Officers</a>
-                <a class="menu-text" href="/products/services/">Services</a>
-                <a class="menu-text" href="/products/contact/">Contact</a>
-                <a class="menu-text" href="/admin">Admin</a>
+          <div >
+            <nav class="base-header">
+                <div class="rtc-logo"> 
+                   <h1>RTC</h1>
+                </div>
+                <div class="app-menus">
+                  <a class="menu-text" href="/home">Home</a>
+                  <a class="menu-text" href="/products">Products</a>
+                  <a class="menu-text" href="/products/newsevents/">News & Events</a>
+                  <a class="menu-text" href="/products/services/">Services</a>
+                  <a class="menu-text" href="/admin">Admin</a>
+                </div>
+                <div class="rtc-menu">
+                  <button onclick="rtc_menus()">&#9776;</button>
+                </div>
             </nav>
           </div>
+          
+          <div class="sidebar" id="rtcmenus">
+            <button class="sidebar-close-button" onclick="rtc_menus()">
+              x
+            </button>
+            <a class="menu-text" href="/products/about/">About Us</a>
+            <a class="menu-text" href="/products/contact/">Contact Us</a>
+            <a class="menu-text" href="/products/officers/">Officers</a>
+            <a class="menu-text" href="/products/faq/">FAQ</a>
+          </div>
+  
           <div class="base-content">
               {% block content %}
               {% endblock %}
@@ -48,5 +62,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script type="text/JavaScript">
+    
+    function rtc_menus(){
+      var element = document.getElementById("rtcmenus");
+      element.classList.toggle("open");
+    }
+    </script>
   </body>
 </html>
