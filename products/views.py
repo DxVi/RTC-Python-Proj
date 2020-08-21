@@ -15,25 +15,9 @@ def product(request):
     return render(request, 'product.html', {'products': products, 'categories':categories})
 
 
-def newsevents(request):
-    return render(request, 'newsevents.html')
 
 
-def about(request):
-    return render(request, 'about.html')
 
 
-def faq(request):
-    return render(request, 'faq.html')
-
-
-def officers(request):
-    return render(request, 'officers.html')
-
-def services(request):
-    return render(request, 'services.html')    
-
-def contact(request):
-    return render(request, 'contact.html')
 
  
